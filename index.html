@@ -92,9 +92,9 @@
   var immdomain = [24431,537148];
   var emmdomain = [20056,566986];
   
-  var circleSize = d3.scale.linear().range([0,25000]).domain([0, 50000]);
+  var circleSize = d3.scale.linear().range([0,60000]).domain([0, 50000]);
 
-  var lineSize = d3.scale.linear().range([2,25]).domain([0, 500]);
+  var lineSize = d3.scale.linear().range([2,20]).domain([0, 500]);
 
   var fillcolor = d3.scale.linear().range(colors).domain(immdomain);
 
@@ -211,9 +211,9 @@ going = data;
 	.attr("fill", function(d) {
 		var diff = d.properties.total_imm - d.properties.total_emm;
 		if(diff>0) {
-		return "#65a89d";
+		return "#00837e";
 		} else {
-		return "#a96a46";
+		return "#7f0433";
 		}
 	
 	})
@@ -357,9 +357,9 @@ var diff = v1-v2;
   var finalval = coming[i][selname] - going[i][selname];
   if(finalval > 0) {
   
-  return "#65a89d";
+  return "#00837e";
   } else {
-  return "#a96a46";
+  return "#7f0433";
   }
   
   })
