@@ -130,12 +130,12 @@
   
   
   var coming, going;
-  d3.csv("https://raw.githubusercontent.com/roseinstitutecmc/ca-competitiveness/main/coming2018.csv", function (data) {
+  d3.csv("https://raw.githubusercontent.com/roseinstitutecmc/ca-competitiveness/main/coming2000-2009.csv", function (data) {
   	coming = data;
   
   });
 					
-  d3.csv("https://raw.githubusercontent.com/roseinstitutecmc/ca-competitiveness/main/going2018.csv", function (data) {
+  d3.csv("https://raw.githubusercontent.com/roseinstitutecmc/ca-competitiveness/main/going2000-2009.csv", function (data) {
 going = data;
 
 	d3.json("https://raw.githubusercontent.com/roseinstitutecmc/ca-competitiveness/main/states.json", function (json) {
