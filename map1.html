@@ -41,7 +41,7 @@
 <h3>Business Migration in the 1990's</h3>
 <p>Data for 1990 - 1999</p>
 
-<div id = "maincontainer" style="position:absolute;">
+<div id = "maincontainer">
 
 
 
@@ -70,9 +70,16 @@
 
 
 <script type="text/javascript">
-   //Width and height
-  var w = 950;
-  var h = 600;
+  // Responsive width and height (from: https://eyeseast.github.io/visible-data/2013/08/26/responsive-d3/)
+  var margin = {top: 10, left: 10, bottom: 10, right: 10}
+  , width = parseInt(d3.select('#map').style('width'))
+  , width = width - margin.left - margin.right
+  , mapRatio = .5
+  , height = width * mapRatio;
+  
+  //Width and height
+  //var w = 950;
+  //var h = 600;
   var centered;
   
   var formatC = d3.format(",.0f");
@@ -81,8 +88,8 @@
    var immin, immax, exmin, exmax;
  
   var projection = d3.geo.albersUsa()
-	.scale(1000)
-	.translate([w / 2 , h / 2 ]);
+	.scale(width)
+	.translate([width / 2 , height / 2 ]);
 
    //Define path generator
   var path = d3.geo.path()
@@ -102,8 +109,8 @@
    //Create SVG element
   var svg = d3.select("#map")
 	.append("svg")
-	.attr("width", w)
-	.attr("height", h)
+    .style('height', height + 'px')
+    .style('width', width + 'px')
 	.style("background", "#fff");
 	
 
@@ -395,7 +402,7 @@ function tweenDash() {
   return function(t) { return i(t); };
 }
 
-d3.select(self.frameElement).style("height", "700px");
+//d3.select(self.frameElement).style("height", "700px");
 
 </script>
 
