@@ -70,6 +70,9 @@
 
 
 <script type="text/javascript">
+  //Reload page on resize
+  window.onresize = function(){ location.reload(); }
+  
   // Responsive width and height (from: https://eyeseast.github.io/visible-data/2013/08/26/responsive-d3/)
   var margin = {top: 10, left: 10, bottom: 10, right: 10}
   , width = parseInt(d3.select('#map').style('width'))
