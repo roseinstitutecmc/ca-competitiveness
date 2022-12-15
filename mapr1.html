@@ -274,7 +274,7 @@ function toolMove(mx, my, data) {
 		if (my < 40) {
 		my = 40
 	};
-	return tooltip.style("top", my + -140 + "px").style("left", mx - 120 + "px").html("<div id='tipContainer'><div id='tipLocation'><b>" + data.id + "</b></div><div id='tipKey'>Migration in: <b>" + formatC(data.properties.total_imm) + "</b><br>Migration out: <b>" + formatC(data.properties.total_emm) + "</b><br>Net migration: <b>" + formatC((data.properties.total_imm - data.properties.total_emm)) + "</b></div><div class='tipClear'></div> </div>");
+	return tooltip.style("top", my + -40 + "px").style("left", mx - 120 + "px").html("<div id='tipContainer'><div id='tipLocation'><b>" + data.id + "</b></div><div id='tipKey'>Migration in: <b>" + formatC(data.properties.total_imm) + "</b><br>Migration out: <b>" + formatC(data.properties.total_emm) + "</b><br>Net migration: <b>" + formatC((data.properties.total_imm - data.properties.total_emm)) + "</b></div><div class='tipClear'></div> </div>");
 };
 
 function toolOver2(v, thepath) {
@@ -304,7 +304,7 @@ var diff = v1-v2;
 		if (my < 40) {
 		my = 40
 	};
-	return tooltip2.style("top", my + -140 + "px").style("left", mx - 120 + "px").html("<div id='tipContainer2'><div id='tipLocation'><b>" + home + "/" + end + "</b></div><div id='tipKey2'>Migration, " + home + " to " + end +": <b>" + formatC(v2) + "</b><br>Migration, " + end + " to " + home +": <b>" + formatC(v1)+ "</b><br>Net change, " + home + ": <b>" + formatD(v1-v2) + "</b></div><div class='tipClear'></div> </div>");
+	return tooltip2.style("top", my + -40 + "px").style("left", mx - 120 + "px").html("<div id='tipContainer2'><div id='tipLocation'><b>" + home + "/" + end + "</b></div><div id='tipKey2'>Migration, " + home + " to " + end +": <b>" + formatC(v2) + "</b><br>Migration, " + end + " to " + home +": <b>" + formatC(v1)+ "</b><br>Net change, " + home + ": <b>" + formatD(v1-v2) + "</b></div><div class='tipClear'></div> </div>");
 };
 
   
