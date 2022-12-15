@@ -212,7 +212,11 @@ going = data;
 		return ctroid;
 	})
 	.attr("r", function(d) {
-		var diff = d.properties.total_imm - d.properties.total_emm;
+        var diff = d.properties.total_imm - d.properties.total_emm;
+        console.log("State: " + d.properties.state);
+        console.log("Diff: " + diff);
+        console.log("sqrt(|diff|/pi): " + Math.sqrt(Math.abs(diff)/Math.PI));
+        console.log("circleSize: " + circleSize(Math.sqrt(Math.abs(diff)/Math.PI)));
 		return circleSize(Math.sqrt(Math.abs(diff)/Math.PI));
 	
 	})
