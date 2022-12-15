@@ -102,9 +102,9 @@
   var immdomain = [24431,537148];
   var emmdomain = [20056,566986];
   
-  var circleSize = d3.scale.linear().range([0,60000]).domain([0, 50000]);
+  var circleSize = d3.scale.linear().range([0,(width/1000)]).domain([0, 1]);
 
-  var lineSize = d3.scale.linear().range([2,20]).domain([0, 500]);
+  var lineSize = d3.scale.linear().range([(width/500),(width/50)]).domain([0, 500]);
 
   var fillcolor = d3.scale.linear().range(colors).domain(immdomain);
 
